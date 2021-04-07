@@ -1,5 +1,6 @@
 import React from 'react'
-import Rest from './rest'
+import { Link } from 'react-router-dom'
+import Rest from '../../utils/rest'
 
 const baseURL = 'https://mymoney-dev-ruth-default-rtdb.firebaseio.com/'
 const { useGet } = Rest(baseURL)
@@ -28,7 +29,7 @@ const Months = () => {
             .map(mes => {
             return (
               <tr key={mes}>
-                <td>{mes}</td>
+                <td><Link to={`/movimentacoes/${mes}`}>{mes} </Link> </td>
                 <td>{data.data[mes].previsao_ent}</td>
                 <td>{data.data[mes].entradas}</td>
                 <td>{data.data[mes].previsao_saida}</td>
