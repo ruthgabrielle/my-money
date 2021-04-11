@@ -13,7 +13,6 @@ function App() {
         <Route path='/movimentacoes/:data' exact component={Moviments}/>
       </div>
     </Router>
-
   )
 }
 
